@@ -19,6 +19,7 @@ public class Test2Controller {
             @ApiImplicitParam(paramType = "path", name = "parm1", required = true, value = "参数1", defaultValue = "Parm1"),
             @ApiImplicitParam(paramType = "path", name = "parm2", required = true, value = "参数2", defaultValue = "Parm2")
     })
+    @ApiResponses(value = {@ApiResponse(code = 405,message = "Invalid input",response = Integer.class)})
     @ResponseBody
     String hello(@PathVariable String parm1,@PathVariable String parm2) {
         return "Hello:"+parm1+"&&"+parm2;

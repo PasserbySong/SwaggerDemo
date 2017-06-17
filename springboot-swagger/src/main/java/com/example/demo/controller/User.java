@@ -1,10 +1,12 @@
 package com.example.demo.controller;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * Created by Administrator on 2017/6/6.
  */
+@ApiModel(value = "User", description = "用户对象")
 public class User {
 
     private String name;
